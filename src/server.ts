@@ -1,3 +1,4 @@
+import { stdout } from 'node:process'
 import { fastifyCors } from '@fastify/cors'
 import { fastifySwagger } from '@fastify/swagger'
 import { fastifySwaggerUi } from '@fastify/swagger-ui'
@@ -36,5 +37,5 @@ app.register(fastifySwaggerUi, {
 app.register(subscribeToEventRoute)
 
 app.listen({ port: env.PORT }, () => {
-  console.log('Server is running ✅')
+  stdout.write(`Server is running on port ${env.PORT} ✅`)
 })

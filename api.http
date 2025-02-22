@@ -5,3 +5,7 @@ Content-Type: application/json
   "name": "Guilherme Felipe",
   "email": "guicezafe@gmail.com"
 }
+
+####
+
+GET http://localhost:3001/invites/id-muito-legal-123
